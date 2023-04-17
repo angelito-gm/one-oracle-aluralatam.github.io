@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de adivinanza</title>
+</head>
+<body>
+    <h1>Juego Adivinación</h1>
+
+    <script>
+        function saltalineas (){
+            document.write ("<br>")
+            document.write ("<br>")
+            document.write ("<br>")
+        }
+
+        function imprimir (frase){
+            document.write (frase)
+            saltalineas()
+        }
+
+        var numeroPensado = parseInt(prompt("Ingrese un número entre 1-10 "))
+        var numeroLanzado = Math.round(Math.random()*10)
+        
+        if (numeroPensado == numeroLanzado){
+            imprimir("Usted adivinó correctamente, el número lanzado es " + numeroLanzado + " !!")
+        }
+        else if (numeroPensado != numeroLanzado){
+            imprimir("Le deseamos suerte para la proxima ocasión, el numero lanzado es " + numeroLanzado)
+        }
+    </script>
